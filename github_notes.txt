@@ -1,0 +1,76 @@
+GitHub notes:
+1. read me file contains the info of the repo/project.
+2. readme.md - this md means markdown.
+3. for updating readme file we can use a different syntax or we can also HTML to edit readme file.
+
+Git notes:
+1. commit simply means to change something.
+2. when we want to commit something that is a 2 step process - 
+	* 1st step - we add the files (meaning the files are ready to commit)
+	* 2nd step - we commit the files (we commit the files)
+2. we have 2 places -
+	* remote - eg is GitHub
+	* local - eg is our pc
+3. 4 status a file in git:
+	* Untracked - when a new files added.
+	* Modified - when the already existing file has a change
+	* staged - when we add files meaning the file is ready to be committed, that status is called staged.
+	* Unchanged - meaning no changes detected. 
+4. best practice is to first create a new repo and then clone it in our local whenever you are starting with a new project.
+5. we cannot delete currently checked out branch.
+6. Fork means to create a copy of a repo from GitHub.
+7. we can also merge changes from our forked copy of a repo to the original repo by using pull request.
+ 
+general commands :
+1. ls = list files in a folder.
+2. ls -a = this will list files including hidden files of a folder.
+3. every repo contains a '.git' hidden folder which contains all the info about the repo, this folder is what makes repo a repo.
+
+
+Git commands :
+
+1. git config --global user.name "<your_github_account_username>" - to add the user name to commit in GitHub.
+2. git config --global user.email "<your_github_account_email>" - to add the email to commit in GitHub.
+
+* in above 2 commands we are using '--global' flag, what it will do is globally in our pc for git it will set the name and email.
+* if we want to use different account for a single project in our pc we can use -
+	- git config user.name "<other_github_account_username>"
+	- git config user-email "<other_github_account_email>"
+	
+* above commands are important.
+
+3. git config --list - this command will list the settings including name and email
+4. git clone <repo_url> - to clone a repo
+5. git status - gives status of the repo like branch name, if there is any change in any of the file of the repo.
+6. git add <file_name> - move the file from the Modified or Untracked status to Staged area or we can say move the files to the staging area.
+7. git add . - move all the files from the Modified or Untracked status to Staged area or we can say move the files to the staging area.
+8. git add <file1_name> <file2_name> - to add multiple files.
+9. git commit -m "<message>" - to commit the staged files.
+10. git push origin main - 
+	* here git push is the command which pushes all the commits from the local to the remote repo.
+	* origin means the remote repo which we have cloned in our local, basically the repo which we have cloned and working on.
+	* main is the branch.
+11. git init - use to create a new git repo.
+12. git remote add origin <repo_link>  suppose we have a local repo and we want to publish that repo in on of our remote repo, so first we create a repo in GitHub/bitbucket, then we run this command replacing
+	'<repo_link>' with the actual repo link.
+13. git remote -v - to verify remote.
+14. git branch - to check which branch you have currently checked out.
+15. git branch -M <new_name> - to rename the current checked out branch.
+16. git push -u origin main - this command will tell git to push all the changes which we will do in the future to this main branch, so after this command we dont have to mention branch name, we can just 	simply do git push. 
+17. git checkout <branch_name> - to change the branch you are working on.
+18. git checkout -b <branch_name> - to create a new branch and immediately switch it.
+19. git branch -d <branch_name> - to delete a branch.
+20. git diff <branch_name> - this will compare the checked out branch with the branch we specify in the command.
+21. git merge <branch_name> - this will merge the checked out branch with the branch we specify in the command.
+23. We can use raise a PR to merge 2 branches.
+24. git pull origin <branch_name> - to pull changes from the remote into the local from the explicitly mentioned branch name.
+25. git pull - to pull changes from the remote into the local from the checked out branch.
+26. git reset - moves all the files from the staging area to the Modified or Untracked status or we can say to the unstage area.
+27. git reset <files_name> - moves a specific file from the staging area to the Modified or Untracked status.
+28. git reset HEAD~1 - moves the last commit to the unstage area.
+29. git reset <commit_id> - moves the commits from the last commit to the mentioned commit id to the unstage area.
+30. got reset --hard <commit_id> - moves the commits from the last commit to the mentioned commit id to the unmodified area, basically in vscode we can see nothing in the stating area as well.
+
+
+
+
