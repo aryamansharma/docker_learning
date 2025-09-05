@@ -8,3 +8,5 @@
 4. Containers is a like container which contains the application and all its dependencies, which we can run on different machines,
     or on a production server.
 5. we share docker image to create containers so we can say, Docker adds an advantage of portability as docker images are very minimal in size.
+6. for downloading docker in our system we download docker desktop.
+7. tag is basically the version of the image.
