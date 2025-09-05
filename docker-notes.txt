@@ -1,1 +1,10 @@
-1. 
+1. Docker is used generally for bg projects and big teams.
+2. Suppose we have a application on our machine, and we want to run the application in some other machine, 
+    so in other machine we have to manually download all its dependencies, and if we forget to install any of the dependency the application
+    wont run. In this scenario Docker can be very helpful.
+3. we have Docker image file, which contains the instructions to create containers. 
+    basically image file is an executeable file and it works like a Class, just like class we create objects or insances from it, 
+    we create containers from image.
+4. Containers is a like container which contains the application and all its dependencies, which we can run on different machines,
+    or on a production server.
+5. we share docker image to create containers so we can say, Docker adds an advantage of portability as docker images are very minimal in size.
