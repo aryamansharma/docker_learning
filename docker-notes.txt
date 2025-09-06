@@ -14,4 +14,6 @@
 9. we have docker image layers, so for a image, we can have multiple layers, but the 1st layer will always be the base layer, 
     after that we can create multiple layers, and the last layer is called the container layer
 10. the container layer is the layer which we use to create containers and it is the only mutable layer, in which we can make changes, 
-    other layers are read only layers or we can say are immutable
+    other layers are read only layers or we can say are immutable.
+11. suppose we have an image on our machine and we try to download another verison of that image, so there will be some common layers between these images,
+    so the layers which are common for both the version will not be downloade, only the different layers will be downloaded.
