@@ -9,4 +9,9 @@
     or on a production server.
 5. we share docker image to create containers so we can say, Docker adds an advantage of portability as docker images are very minimal in size.
 6. for downloading docker in our system we download docker desktop.
-7. tag is basically the version of the image.
+7. tag is basically a version or a variant of an image.
+8. we can run multiple containers on a single machine. thats actually one of the core advantage of docker.
+9. we have docker image layers, so for a image, we can have multiple layers, but the 1st layer will always be the base layer, 
+    after that we can create multiple layers, and the last layer is called the container layer
+10. the container layer is the layer which we use to create containers and it is the only mutable layer, in which we can make changes, 
+    other layers are read only layers or we can say are immutable

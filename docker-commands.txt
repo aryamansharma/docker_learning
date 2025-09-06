@@ -1,3 +1,25 @@
 1. docker images - this command gives all the images stored locally on your machine.
 2. docker pull <image_name> - this command is used to pull an image from docker hub (if the image doesnt exist on our local machine), into our local machine.
-3. docker run <image_name> - this command is used to create containers from an image.
+3. docker run <image_name> - this command is used to create new containers from an image.
+4. docker run -it <image_name> - suppose we create a container from an ubuntu image, si of we use '-it' flag than we interact with the ubuntu container,
+    basically we can interact with that container, and if we make any changes in our ubuntu container like creating a file, its not going to affect our
+    machine where we are running this container.
+5. exit - to exit a container.
+6. docker ps -a - to check how many container exists on our machine.
+7. docker ps - to check which containers are running.
+8. docker start <container_name> OR <container_id> - this command is used to run existing containers.
+9. docker stop <container_name> OR <container_id> - this command is used to stop a running containers.
+
+NOTE: if we directly do - docker run <image_name> it will check if we have an image for that container, 
+    if not than it will download the new image and create a new container from it.
+
+10. docker rmi <image_name> - this command is used to remove an image from a machine, but to remove the image we must first delete all the containers
+    created from it.
+11. docker rm <container_id> - this command is used to remove a container from a machine.
+12. docker run -d <image_name> - this -d (detach) flag will run the container in the background,by default all the containers we run are run in attach mode.
+13. docker pull <image_name>:<tag> - this will pull a specific version or variant of an image.
+14. docker run --name mysql-older -e MYSQL_ROOT_PASSWORD=secret -d mysql:8.0 - in this command :
+    a. --name is used to give a new name to the container, instead of the name which is automatically genrated. so for this container 'mysql-older' will be the name of this container.
+    b. -e is used to define an evnironment variable, we can define evnironment variables with a container, 
+        in case of mysql image its important to create a 'MYSQL_ROOT_PASSWORD' evnironment variable. 
+        so for above container 'secret' will be the value of the 'MYSQL_ROOT_PASSWORD' evnironment variable.
